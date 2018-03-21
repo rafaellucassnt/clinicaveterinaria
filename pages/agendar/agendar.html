@@ -33,6 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
   
 
 
@@ -174,12 +175,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-          Editar Clientes
+          Agendar Consulta
         </h1>
         <ol class="breadcrumb">
           <li><a href="/starter.html"><i class="fa fa-home"></i> Principal</a></li>
-          <li><a href="/pages/clientes/clientes.html">Clientes</a></li>
-          <li class="active">Editar Clientes</li>
+          <li><a href="/pages/clientes/clientes.html">Agendar</a></li>
+          <li class="active">Agendar Consulta</li>
         </ol>
       </section>
 
@@ -189,28 +190,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-xs-12">
               <div class="box">
                   <div class="box-header">
-                  <h3 class="box-title">Dados do Cliente</h3>
+                  <h3 class="box-title">Dados do Agendamento</h3>
                   <form action="../../index.html" method="post">
                     <div class="form-group has-feedback">
-                      <input type="text" class="form-control" placeholder="Nome Completo">
-                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                         <label>Nome</label>
+                      <input type="text" id="nomeanimal" class="form-control" placeholder="Nome Animal">
                     </div>
                     <div class="form-group has-feedback">
-                      <input name="cpfcnpj" id="cpfcnpj" type="text" class="form-control" placeholder="CPF">
-                      <span class="glyphicon glyphicon-option-horizontal form-control-feedback"></span>
+                        <label>Dia</label>
+                      <input name="dataconsulta" id="datepicker" type="text" class="form-control" placeholder="">
                     </div>
-                    <div class="form-group has-feedback">
-                      <input type="email" class="form-control" placeholder="Email">
-                      <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                      <input type="password" class="form-control" placeholder="Senha">
-                      <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                      <input type="password" class="form-control" placeholder="Repita a Senha">
-                      <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-                    </div>
+                    <div class="bootstrap-timepicker">
+                            <div class="form-group">
+                              <label>Hora</label>
+                              <div class="input-group">
+                                <input id ="timepicker1" type="text" class="form-control timepicker">
+                              </div>
+                            </div>
+                          </div>
                     <div class="row">
                       <div class="col-xs-2">
                         <button type="submit" class="btn btn-success btn-block btn-flat">Salvar</button>
@@ -284,6 +281,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
 
 <script>
     $(function () {
@@ -320,9 +319,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
         }
       )
   
+
+    $('#timepicker1').timepicker({
+        defaultTime:'current',
+        showInputs:true,
+        showMeridian: false
+    });
+   
+
       //Date picker
       $('#datepicker').datepicker({
-        autoclose: true
+        autoclose: true,
+      language: 'pt-BR',
+      minViewMode: 0,
+      todayHighlight: true,
+      format: 'dd/mm/yyyy',
+
+
       })
   
       //iCheck for checkbox and radio inputs

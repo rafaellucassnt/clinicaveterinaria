@@ -174,12 +174,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-          Editar Clientes
+          Cadastrar Animal
         </h1>
         <ol class="breadcrumb">
           <li><a href="/starter.html"><i class="fa fa-home"></i> Principal</a></li>
-          <li><a href="/pages/clientes/clientes.html">Clientes</a></li>
-          <li class="active">Editar Clientes</li>
+          <li><a href="/pages/clientes/clientes.html">Animal</a></li>
+          <li class="active">Cadastrar Animal</li>
         </ol>
       </section>
 
@@ -189,27 +189,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-xs-12">
               <div class="box">
                   <div class="box-header">
-                  <h3 class="box-title">Dados do Cliente</h3>
+                  <h3 class="box-title">Dados do Animal</h3>
                   <form action="../../index.html" method="post">
                     <div class="form-group has-feedback">
-                      <input type="text" class="form-control" placeholder="Nome Completo">
-                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                         <label>Nome</label>
+                      <input type="text" id="nomeanimal" class="form-control" placeholder="Nome Animal">
                     </div>
                     <div class="form-group has-feedback">
-                      <input name="cpfcnpj" id="cpfcnpj" type="text" class="form-control" placeholder="CPF">
-                      <span class="glyphicon glyphicon-option-horizontal form-control-feedback"></span>
+                        <label>Idade</label>
+                      <input name="idadeanimal" id="idadeanimal" type="text" class="form-control" placeholder="Idade">
                     </div>
                     <div class="form-group has-feedback">
-                      <input type="email" class="form-control" placeholder="Email">
-                      <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                         <label>Raça</label>
+                      <input type="text" id="raca" class="form-control" placeholder="Raça">
                     </div>
                     <div class="form-group has-feedback">
-                      <input type="password" class="form-control" placeholder="Senha">
-                      <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        <label>Espécie</label>
+                        <select id+"especie" class="form-control select2" data-placeholder="Selecionar">
+                        <option>Cachorro</option>
+                        <option>Gato</option>
+                      </select>
                     </div>
                     <div class="form-group has-feedback">
-                      <input type="password" class="form-control" placeholder="Repita a Senha">
-                      <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                            <label>Sexo</label>
+                        <select class="form-control select2" data-placeholder="Selecionar" >
+                            <option>Macho</option>
+                            <option>Femea</option>
+                        </select>
                     </div>
                     <div class="row">
                       <div class="col-xs-2">
