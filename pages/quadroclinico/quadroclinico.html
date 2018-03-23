@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Agendar Consulta</title>
+    <title>Quadro Clinico</title>
     <!-- Tell the Email to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -173,12 +173,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-          Agendar Consulta
+         Quadro Clinico
         </h1>
         <ol class="breadcrumb">
           <li><a href="/starter.html"><i class="fa fa-home"></i> Principal</a></li>
-          <li><a href="/pages/clientes/clientes.html">Agendar</a></li>
-          <li class="active">Agendar Consulta</li>
+          <li><a href="/pages/clientes/clientes.html">Quadro clinco</a></li>
+          <li class="active">Informações</li>
         </ol>
       </section>
 
@@ -195,21 +195,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <input type="text" id="nomeanimal" class="form-control" placeholder="Nome Animal">
                     </div>
                     <div class="form-group has-feedback">
+                            <label>Nome</label>
+                         <input type="text" id="racaanimal" class="form-control" placeholder="Raça Animal">
+                       </div>
+                    <div class="form-group has-feedback">
                         <label>Dia</label>
                       <input name="dataconsulta" id="datepicker" type="text" class="form-control" placeholder="">
                     </div>
                     <div class="bootstrap-timepicker">
-                            <div class="form-group">
-                              <label>Hora</label>
-                              <div class="input-group">
-                                <input id ="timepicker1" type="text" class="form-control timepicker">
-                              </div>
+                        <div class="form-group">
+                            <label>Hora</label>
+                            <div class="input-group">
+                            <input id ="timepicker1" type="text" class="form-control timepicker">
                             </div>
-                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <div class="input-group-prepend">
+                            <label>Quadro Clinico</label>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea" placeholder="Informações do Quadro Clinico do animal..."></textarea>
+                    </div>
                     <div class="row">
                       <div class="col-xs-2">
                         <button type="submit" class="btn btn-success btn-block btn-flat">Salvar</button>
                       </div>
+                      <div class="col-xs-2">
+                          <button type="submit" class="btn btn-info btn-block btn-flat">Imprimir</button>
+                        </div>
                       <!-- /.col -->
                     </div>
                   </form>
